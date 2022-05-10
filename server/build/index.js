@@ -23,7 +23,7 @@ class Server {
         this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     routes() {
-        this.app.use(indexRoutes_1.default);
+        this.app.use('/', indexRoutes_1.default);
         this.app.use('/api/games', gamesRoutes_1.default);
     }
     start() {
