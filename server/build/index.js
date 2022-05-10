@@ -27,7 +27,7 @@ class Server {
         this.app.use('/api/games', gamesRoutes_1.default);
     }
     start() {
-        this.app.listen(this.app.get("port"), () => { console.log('Server on port: ', this.app.get('port')); });
+        this.app.listen(this.app.get('port'), () => { console.log(`Server on port: `, this.app.get('port')); });
     }
 }
 const server = new Server();

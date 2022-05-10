@@ -30,8 +30,8 @@ class Server{
         
     }
     start(): void{
-        this.app.listen(this.app.get("port"), () =>
-{ console.log('Server on port: ', this.app.get('port'))});
+        this.app.listen(this.app.get('port'), () =>
+{ console.log(`Server on port: `, this.app.get('port'))});
     }
 
 
