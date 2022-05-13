@@ -6,6 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mysql_1 = __importDefault(require("mysql"));
 const keys_1 = __importDefault(require("./keys"));
 const pool = mysql_1.default.createPool(keys_1.default.database);
+`pool.getConnection()
+    .then((connection: any) => {
+        pool.releaseConnection(connection);
+        console.log('DB is connected');
+    });`;
 pool.getConnection((err, connection) => {
     if (err)
         throw err;

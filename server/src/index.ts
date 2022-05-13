@@ -4,7 +4,11 @@ import gamesRoutes from './routes/gamesRoutes';
 import morgan from 'morgan';
 import cors from 'cors';
 
+
+
 class Server{
+
+    
 
     public app : Application;
     constructor(){
@@ -21,7 +25,7 @@ class Server{
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended:false}));
-        this.app.use(express.urlencoded({extended:false}));
+        //this.app.use(express.urlencoded({extended:false}));
     }
 
     routes():void{
@@ -37,5 +41,6 @@ class Server{
 
 }
 
+//const mysql = require('mysql2/promise');
 const server =  new Server();
 server.start();

@@ -20,7 +20,7 @@ class Server {
         this.app.use((0, cors_1.default)());
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: false }));
-        this.app.use(express_1.default.urlencoded({ extended: false }));
+        //this.app.use(express.urlencoded({extended:false}));
     }
     routes() {
         this.app.use('/', indexRoutes_1.default);
@@ -30,5 +30,6 @@ class Server {
         this.app.listen(this.app.get('port'), () => { console.log(`Server on port: `, this.app.get('port')); });
     }
 }
+//const mysql = require('mysql2/promise');
 const server = new Server();
 server.start();

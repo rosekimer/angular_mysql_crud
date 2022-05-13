@@ -6,8 +6,8 @@ create table game(
     id int(11) not null auto_increment primary key,
     title varchar(180),
     description varchar(255),
-    image varchar(255),
-    create_at timestamp defailt current_timestamp
+    image varchar(255)
+    create_at timestamp default current_timestamp
 );
 
 rename table game to games
